@@ -64,4 +64,30 @@ public abstract class HeartbeatApi {
 	 * @return Collection of uuids
 	 */
 	public abstract Collection<UUID> getWhitelistedPlayers();
+
+	/**
+	 * This is a Bungeecord feature
+	 * Get the server names where BAC is required on.
+	 * This means that each server in this list requires users to have BAC enabled to be able to join
+	 * Supports regex as well
+	 *
+	 * @return Collection of server names
+	 */
+	public abstract Collection<String> getBacRequiredServers();
+
+	/**
+	 * This is a Bungeecord feature
+	 * Adds a server from the BAC required server list
+	 *
+	 * @param serverName Server name of server to add
+	 */
+	public abstract void addServerToRequiredServers(String serverName);
+
+	/**
+	 * This is a Bungeecord feature
+	 * Removes a server from the BAC required server list
+	 *
+	 * @param serverName Server name of server to remove
+	 */
+	public abstract void removeServerToRequiredServers(String serverName);
 }
