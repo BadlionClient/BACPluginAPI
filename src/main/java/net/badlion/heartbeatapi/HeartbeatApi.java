@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.UUID;
 
 public abstract class HeartbeatApi {
-	static HeartbeatApi instance;
+	protected static HeartbeatApi instance;
 
 	/**
 	 * Get the api instance
